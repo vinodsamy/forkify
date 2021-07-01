@@ -396,12 +396,10 @@ const timeout = function(s) {
 ///////////////////////////////////////
 const renderSpinner = (parentElement)=>{
     const markup = `\n        <div class="spinner">\n          <svg>\n            <use href="${_iconsSvgDefault.default}#icon-loader"></use>\n          </svg>\n        </div> \n\n  `;
-    parentElement.insertAdjacentHTML('afterbegin', markup);
 };
 const showRecipe = async ()=>{
     //load the single recipe
     try {
-        renderSpinner(recipeContainer);
         const res = await fetch('https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886');
         if (!res.ok) throw new Error('Invalid id');
         const data = await res.json();
@@ -428,7 +426,7 @@ const showRecipe = async ()=>{
 showRecipe();
 
 },{"url:../img/icons.svg":"3t5dV","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"3t5dV":[function(require,module,exports) {
-module.exports = require('./bundle-url').getBundleURL() + "icons.d4a14980.svg";
+module.exports = require('./bundle-url').getBundleURL() + "icons.HASH_REF_f6727c52d326b6f99dffa0b9d4a14980.svg";
 
 },{"./bundle-url":"3seVR"}],"3seVR":[function(require,module,exports) {
 "use strict";
@@ -492,4 +490,4 @@ exports.export = function(dest, destName, get) {
 
 },{}]},["1WnDs","3miIZ"], "3miIZ", "parcelRequire3169")
 
-//# sourceMappingURL=index.250b04c7.js.map
+//# sourceMappingURL=index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js.map
