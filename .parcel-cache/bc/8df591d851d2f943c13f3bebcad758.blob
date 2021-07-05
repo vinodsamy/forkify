@@ -1,0 +1,37 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _iconsSvg = require("url:../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+var _modelJs = require("./model.js");
+const recipeContainer = document.querySelector('.recipe');
+const timeout = function(s) {
+    return new Promise(function(_, reject) {
+        setTimeout(function() {
+            reject(new Error(`Request took too long! Timeout after ${s} second`));
+        }, s * 1000);
+    });
+};
+// https://forkify-api.herokuapp.com/v2
+///////////////////////////////////////
+const renderSpinner = (parentElement)=>{
+    const markup = `\n        <div class="spinner">\n          <svg>\n            <use href="${_iconsSvgDefault.default}#icon-loader"></use>\n          </svg>\n        </div> \n\n  `;
+    parentElement.insertAdjacentHTML('afterbegin', markup);
+};
+const showRecipe = async ()=>{
+    //load the single recipe
+    try {
+        const id = window.location.hash.slice(1);
+        console.log('id', id);
+        if (!id) return;
+        // renderSpinner(recipeContainer);
+        await _modelJs.loadRecipe(id);
+        const { recipe  } = _modelJs.state;
+        console.log('controller', recipe);
+        //Render the recipe
+        recipeContainer.insertAdjacentHTML('afterbegin', markup);
+        window.addEventListener('hashchange', showRecipe);
+    // window.addEventListener('')
+    } catch (err) {
+        alert(err);
+    }
+};
+showRecipe();
