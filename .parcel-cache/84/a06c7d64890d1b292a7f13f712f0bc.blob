@@ -1,0 +1,14 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getJSON", ()=>getJSON
+);
+const getJSON = async (url)=>{
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Invalid id');
+        const data = await res.json();
+        return data;
+    } catch (err) {
+        throw err;
+    }
+};
