@@ -19,11 +19,18 @@ const controlRecipes = async () => {
     recipeView.render(recipe);
     console.log('controller', recipe);
     //Render the recipe
-
-    window.addEventListener('hashchange', controlRecipes);
-    window.addEventListener('load', controlRecipes);
   } catch (err) {
     console.error(err);
+    // throw err;
+    recipeView.renderError(`${err}`);
   }
 };
 controlRecipes();
+// window.addEventListener('hashchange', controlRecipes);
+// window.addEventListener('load', controlRecipes);
+
+const init = () => {
+  //publisher-subsciber method
+  recipeView.addHandlerRender(controlRecipes);
+};
+init();
