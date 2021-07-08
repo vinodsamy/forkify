@@ -1,6 +1,9 @@
+import { async } from 'regenerator-runtime';
 import * as model from './model.js';
 import recipeView from './view/recipeView.js';
 const recipeContainer = document.querySelector('.recipe');
+const search = document.querySelector('.search');
+const searchField = document.querySelector('.search__field');
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -28,6 +31,14 @@ const controlRecipes = async () => {
 controlRecipes();
 // window.addEventListener('hashchange', controlRecipes);
 // window.addEventListener('load', controlRecipes);
+
+search.addEventListener('submit', async e => {
+  e.preventDefault();
+  const query = searchField.value;
+  const searchResults = await model.loadSearchResults(query);
+  console.log('searchRecipeData', searchResults);
+  searchField.value = '';
+});
 
 const init = () => {
   //publisher-subsciber method

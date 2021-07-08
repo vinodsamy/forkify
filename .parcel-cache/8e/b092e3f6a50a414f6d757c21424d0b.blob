@@ -1,0 +1,45 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "state", ()=>state
+);
+parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe
+);
+parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults
+);
+var _configJs = require("./config.js");
+var _helpersJs = require("./helpers.js");
+const state = {
+    recipe: {
+    }
+};
+const loadRecipe = async (id)=>{
+    try {
+        console.log('API_URL', _configJs.API_URL);
+        const data = await _helpersJs.getJSON(`${_configJs.API_URL}${id}`);
+        let { recipe  } = data.data;
+        state.recipe = {
+            id: recipe.id,
+            imageUrl: recipe.image_url,
+            ingredients: recipe.ingredients,
+            soureUrl: recipe.source_url,
+            servings: recipe.servings,
+            publisher: recipe.publisher,
+            title: recipe.title
+        };
+        console.log(state.recipe);
+    } catch (err) {
+        // alert(err);
+        // console.error(err);
+        throw err;
+    }
+};
+const loadSearchResults = async (query)=>{
+    try {
+        const data = await _helpersJs.getJSON(`${_configJs.API_URL}?search=${query}`);
+        console.log('searchResultsFromController', data);
+        const { recipes  } = data.data;
+        console.log('recipes', recipes);
+    } catch (error) {
+        throw error;
+    }
+}; // loadSearchResults('pizza');

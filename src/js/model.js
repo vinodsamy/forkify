@@ -28,3 +28,16 @@ export const loadRecipe = async id => {
     throw err;
   }
 };
+
+export const loadSearchResults = async query => {
+  try {
+    const data = await getJSON(`${API_URL}?search=${query}`);
+    console.log('searchResultsFromController', data);
+    const { recipes } = data.data;
+    console.log('recipes', recipes);
+    return recipes;
+  } catch (error) {
+    throw error;
+  }
+};
+// loadSearchResults('pizza');
