@@ -53,6 +53,7 @@ const controlSearchResults = async () => {
   await model.loadSearchResults(query);
   //render searchResults UI
   console.log('stateSearchResults', model.state.search.results);
+  searchView.renderSearchResults(model.state.search.results);
 };
 const init = () => {
   //publisher-subsciber method
