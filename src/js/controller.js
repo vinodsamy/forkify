@@ -45,10 +45,13 @@ controlRecipes();
 // });
 
 const controlSearchResults = async () => {
+  //get Query
   const query = searchView.getQuery();
   console.log('query was', query);
   if (!query) return;
+  //get the data from API
   await model.loadSearchResults(query);
+  //render searchResults UI
   console.log('stateSearchResults', model.state.search.results);
 };
 const init = () => {
