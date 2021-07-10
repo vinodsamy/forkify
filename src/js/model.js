@@ -2,6 +2,10 @@ import { API_URL } from './config.js';
 import { getJSON } from './helpers.js';
 export const state = {
   recipe: {},
+  search: {
+    query: '',
+    results: {},
+  },
 };
 
 export const loadRecipe = async id => {
@@ -33,9 +37,15 @@ export const loadSearchResults = async query => {
   try {
     const data = await getJSON(`${API_URL}?search=${query}`);
     console.log('searchResultsFromController', data);
-    const { recipes } = data.data;
-    console.log('recipes', recipes);
-    return recipes;
+    const recipe = data.data.recipes.map(rec => {
+      return {
+        id: rec.id,
+        imageUrl: rec.image_url,
+        publisher: rec.publisher,
+        title: rec.title,
+      };
+    });
+    state.search.results = recipe;
   } catch (error) {
     throw error;
   }

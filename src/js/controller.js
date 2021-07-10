@@ -1,9 +1,10 @@
 import { async } from 'regenerator-runtime';
 import * as model from './model.js';
 import recipeView from './view/recipeView.js';
-const recipeContainer = document.querySelector('.recipe');
-const search = document.querySelector('.search');
-const searchField = document.querySelector('.search__field');
+import searchView from './view/searchView.js';
+// const recipeContainer = document.querySelector('.recipe');
+// const search = document.querySelector('.search');
+// const searchField = document.querySelector('.search__field');
 
 // https://forkify-api.herokuapp.com/v2
 
@@ -32,16 +33,27 @@ controlRecipes();
 // window.addEventListener('hashchange', controlRecipes);
 // window.addEventListener('load', controlRecipes);
 
-search.addEventListener('submit', async e => {
-  e.preventDefault();
-  const query = searchField.value;
-  const searchResults = await model.loadSearchResults(query);
-  console.log('searchRecipeData', searchResults);
-  searchField.value = '';
-});
+//my old way:
 
+// search.addEventListener('submit', async e => {
+//   e.preventDefault();
+//   const query = searchField.value;
+//   const searchResults = await model.loadSearchResults(query);
+//   console.log('searchRecipeData', searchResults);
+//   recipeView.renderSearchResults(searchResults);
+//   searchField.value = '';
+// });
+
+const controlSearchResults = async () => {
+  const query = searchView.getQuery();
+  console.log('query was', query);
+  if (!query) return;
+  await model.loadSearchResults(query);
+  console.log('stateSearchResults', model.state.search.results);
+};
 const init = () => {
   //publisher-subsciber method
   recipeView.addHandlerRender(controlRecipes);
+  searchView.addHandlerSearch(controlSearchResults);
 };
 init();
