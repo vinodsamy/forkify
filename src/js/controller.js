@@ -1,6 +1,7 @@
 import { async } from 'regenerator-runtime';
 import * as model from './model.js';
 import recipeView from './view/recipeView.js';
+import resultsView from './view/resultsView.js';
 import searchView from './view/searchView.js';
 // const recipeContainer = document.querySelector('.recipe');
 // const search = document.querySelector('.search');
@@ -45,15 +46,21 @@ controlRecipes();
 // });
 
 const controlSearchResults = async () => {
-  //get Query
-  const query = searchView.getQuery();
-  console.log('query was', query);
-  if (!query) return;
-  //get the data from API
-  await model.loadSearchResults(query);
-  //render searchResults UI
-  console.log('stateSearchResults', model.state.search.results);
-  searchView.renderSearchResults(model.state.search.results);
+  try {
+    resultsView.renderSpinner();
+    //get Query
+    const query = searchView.getQuery();
+    console.log('query was', query);
+    if (!query) return;
+    //get the data from API
+    await model.loadSearchResults(query);
+    //render searchResults UI
+    console.log('stateSearchResults', model.state.search.results);
+    resultsView.render(model.state.search.results);
+    // searchView.renderSearchResults(model.state.search.results);
+  } catch (err) {
+    console.log(err);
+  }
 };
 const init = () => {
   //publisher-subsciber method

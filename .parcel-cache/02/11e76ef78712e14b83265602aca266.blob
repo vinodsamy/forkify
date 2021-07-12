@@ -1,0 +1,19 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _viewJs = require("./view.js");
+var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+class ResultView extends _viewJsDefault.default {
+    _parentElement = document.querySelector('.results');
+    _errorMessage = "We could't find the recipe.Please try another one!";
+    _message = '';
+    _generateMarkup() {
+        console.log('resultView search Results', this._data);
+        return this._data.map(this._generatePreviewMarkup).join('');
+    }
+    _generatePreviewMarkup() {
+        return `\n      <li class="preview">\n                <a class="preview__link preview__link--active" href="#23456">\n                  <figure class="preview__fig">\n                    <img src="${recipe.imageUrl}" alt="${recipe.title}" />\n                  </figure>\n                  <div class="preview__data">\n                    <h4 class="preview__title">${recipe.title}</h4>\n                    <p class="preview__publisher">${recipe.publisher}</p>\n                    <div class="preview__user-generated">\n                      <svg>\n                        <use href="${_iconsSvgDefault.default}#icon-user"></use>\n                      </svg>\n                    </div>\n                  </div>\n                </a>\n      </li>\n    `;
+    }
+}
+exports.default = new ResultView();

@@ -1,0 +1,64 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _regeneratorRuntime = require("regenerator-runtime");
+var _modelJs = require("./model.js");
+var _recipeViewJs = require("./view/recipeView.js");
+var _recipeViewJsDefault = parcelHelpers.interopDefault(_recipeViewJs);
+var _searchViewJs = require("./view/searchView.js");
+var _searchViewJsDefault = parcelHelpers.interopDefault(_searchViewJs);
+// const recipeContainer = document.querySelector('.recipe');
+// const search = document.querySelector('.search');
+// const searchField = document.querySelector('.search__field');
+// https://forkify-api.herokuapp.com/v2
+///////////////////////////////////////
+const controlRecipes = async ()=>{
+    //load the single recipe
+    try {
+        const id = window.location.hash.slice(1);
+        console.log('id', id);
+        if (!id) return;
+        // renderSpinner(recipeContainer);
+        _recipeViewJsDefault.default.renderSpinner();
+        await _modelJs.loadRecipe(id);
+        const { recipe  } = _modelJs.state;
+        _recipeViewJsDefault.default.render(recipe);
+        console.log('controller', recipe);
+    //Render the recipe
+    } catch (err) {
+        console.error(err);
+        // throw err;
+        _recipeViewJsDefault.default.renderError();
+    }
+};
+controlRecipes();
+// window.addEventListener('hashchange', controlRecipes);
+// window.addEventListener('load', controlRecipes);
+//my old way:
+// search.addEventListener('submit', async e => {
+//   e.preventDefault();
+//   const query = searchField.value;
+//   const searchResults = await model.loadSearchResults(query);
+//   console.log('searchRecipeData', searchResults);
+//   recipeView.renderSearchResults(searchResults);
+//   searchField.value = '';
+// });
+const controlSearchResults = async ()=>{
+    try {
+        //get Query
+        const query = _searchViewJsDefault.default.getQuery();
+        console.log('query was', query);
+        if (!query) return;
+        //get the data from API
+        await _modelJs.loadSearchResults(query);
+        //render searchResults UI
+        console.log('stateSearchResults', _modelJs.state.search.results);
+    // searchView.renderSearchResults(model.state.search.results);
+    } catch (err) {
+        console.log(err);
+    }
+};
+const init = ()=>{
+    //publisher-subsciber method
+    _recipeViewJsDefault.default.addHandlerRender(controlRecipes);
+    _searchViewJsDefault.default.addHandlerSearch(controlSearchResults);
+};
+init();

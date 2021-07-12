@@ -1,0 +1,28 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
+class SearchView {
+    #parentElement = document.querySelector('.search');
+    getQuery() {
+        const query = this.#parentElement.querySelector('.search__field').value;
+        this.#clearSearchInput();
+        return query;
+    }
+     #clearSearchInput() {
+        this.#parentElement.querySelector('.search__field').value = '';
+    }
+    addHandlerSearch(handler) {
+        this.#parentElement.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            handler();
+        });
+    }
+    renderSearchResults(data) {
+        const markup = `\n    ${data.map((recipe)=>{
+            return `\n            <li class="preview">\n                <a class="preview__link preview__link--active" href="#23456">\n                  <figure class="preview__fig">\n                    <img src="${recipe.image_url}" alt="${recipe.title}" />\n                  </figure>\n                  <div class="preview__data">\n                    <h4 class="preview__title">${recipe.title}</h4>\n                    <p class="preview__publisher">${recipe.publisher}</p>\n                    <div class="preview__user-generated">\n                      <svg>\n                        <use href="${_iconsSvgDefault.default}#icon-user"></use>\n                      </svg>\n                    </div>\n                  </div>\n                </a>\n             </li>\n      `;
+        })};\n    `;
+        this.#resultsElement.insertAdjacentHTML('afterbegin', markup);
+    }
+}
+exports.default = new SearchView();
