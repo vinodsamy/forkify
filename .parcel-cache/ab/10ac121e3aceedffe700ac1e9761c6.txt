@@ -1,12 +1,12 @@
 19067
 51/home/vino/Documents/forkify-recipe-app/.prettierrc1611751378000000000 0
 68/home/vino/Documents/forkify-recipe-app/forkify-flowchart-part-1.png1611751378000000000 0
-67/home/vino/Documents/forkify-recipe-app/dist/index.912556d5.css.map1626067359495011571 0
-55/home/vino/Documents/forkify-recipe-app/dist/index.html1626067359491011527 0
-62/home/vino/Documents/forkify-recipe-app/dist/logo.5d271741.png1626067359471011304 0
-63/home/vino/Documents/forkify-recipe-app/dist/icons.c4b52749.svg1626067359471011304 0
-66/home/vino/Documents/forkify-recipe-app/dist/index.250b04c7.js.map1626067359503011660 0
-44/home/vino/Documents/forkify-recipe-app/dist1626067359503011660 1
+67/home/vino/Documents/forkify-recipe-app/dist/index.912556d5.css.map1626153403534911478 0
+55/home/vino/Documents/forkify-recipe-app/dist/index.html1626153403526911401 0
+62/home/vino/Documents/forkify-recipe-app/dist/logo.5d271741.png1626153403498911132 0
+63/home/vino/Documents/forkify-recipe-app/dist/icons.c4b52749.svg1626153403498911132 0
+66/home/vino/Documents/forkify-recipe-app/dist/index.250b04c7.js.map1626153403534911478 0
+44/home/vino/Documents/forkify-recipe-app/dist1626153403534911478 1
 50/home/vino/Documents/forkify-recipe-app/.gitignore1625029745763383102 0
 68/home/vino/Documents/forkify-recipe-app/forkify-flowchart-part-3.png1611751378000000000 0
 77/home/vino/Documents/forkify-recipe-app/node_modules/assign-symbols/README.md1513722651000000000 0
@@ -4317,7 +4317,7 @@
 114/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-charset/node_modules/postcss/lib/comment.js499162500000000000 0
 90/home/vino/Documents/forkify-recipe-app/node_modules/htmlparser2/lib/MultiplexHandler.d.ts499162500000000000 0
 118/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-charset/node_modules/postcss/lib/stringifier.js499162500000000000 0
-63/home/vino/Documents/forkify-recipe-app/dist/icons.d4a14980.svg1626067359479011393 0
+63/home/vino/Documents/forkify-recipe-app/dist/icons.d4a14980.svg1626153403498911132 0
 91/home/vino/Documents/forkify-recipe-app/node_modules/@parcel/node-libs-browser/package.json1625029497154170885 0
 111/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-charset/node_modules/postcss/lib/list.js499162500000000000 0
 111/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-charset/node_modules/postcss/lib/node.js499162500000000000 0
@@ -5676,7 +5676,7 @@
 78/home/vino/Documents/forkify-recipe-app/node_modules/lodash/fp/wrapperValue.js499162500000000000 0
 91/home/vino/Documents/forkify-recipe-app/node_modules/nwsapi/src/modules/nwsapi-traversal.js499162500000000000 0
 122/home/vino/Documents/forkify-recipe-app/node_modules/cssnano-util-raw-cache/node_modules/postcss/lib/terminal-highlight.js499162500000000000 0
-63/home/vino/Documents/forkify-recipe-app/dist/index.912556d5.css1626067359491011527 0
+63/home/vino/Documents/forkify-recipe-app/dist/index.912556d5.css1626153403526911401 0
 114/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-positions/node_modules/postcss-value-parser1625029503942218516 1
 73/home/vino/Documents/forkify-recipe-app/node_modules/astring/CHANGELOG.md499162500000000000 0
 91/home/vino/Documents/forkify-recipe-app/node_modules/@nodelib/fs.scandir/out/types/index.js499162500000000000 0
@@ -6707,7 +6707,7 @@
 93/home/vino/Documents/forkify-recipe-app/node_modules/core-js/features/object/define-setter.js499162500000000000 0
 77/home/vino/Documents/forkify-recipe-app/node_modules/acorn/dist/acorn.mjs.map499162500000000000 0
 88/home/vino/Documents/forkify-recipe-app/node_modules/highlight.js/styles/school-book.png499162500000000000 0
-65/home/vino/Documents/forkify-recipe-app/dist/favicon.80934ffe.png1626067359471011304 0
+65/home/vino/Documents/forkify-recipe-app/dist/favicon.80934ffe.png1626153403454910707 0
 72/home/vino/Documents/forkify-recipe-app/node_modules/acorn/dist/acorn.js499162500000000000 0
 86/home/vino/Documents/forkify-recipe-app/node_modules/core-js/features/iterator/take.js499162500000000000 0
 105/home/vino/Documents/forkify-recipe-app/node_modules/caniuse-lite/data/features/css-content-visibility.js499162500000000000 0
@@ -8297,7 +8297,7 @@
 110/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-display-values/node_modules/postcss/lib1625029478374034083 1
 89/home/vino/Documents/forkify-recipe-app/node_modules/@parcel/core/test/AssetGraph.test.js499162500000000000 0
 91/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-charset/CHANGELOG.md499162500000000000 0
-66/home/vino/Documents/forkify-recipe-app/src/js/view/resultsView.js1626067359331009751 0
+66/home/vino/Documents/forkify-recipe-app/src/js/view/resultsView.js1626153331062280022 0
 92/home/vino/Documents/forkify-recipe-app/node_modules/core-js/features/async-iterator/drop.js499162500000000000 0
 77/home/vino/Documents/forkify-recipe-app/node_modules/postcss-minify-selectors1625029499618188283 1
 106/home/vino/Documents/forkify-recipe-app/node_modules/postcss-svgo/node_modules/supports-color/package.json1625029503122212812 0
@@ -9520,7 +9520,7 @@
 107/home/vino/Documents/forkify-recipe-app/node_modules/postcss-discard-empty/node_modules/ansi-styles/license1496344655000000000 0
 69/home/vino/Documents/forkify-recipe-app/node_modules/parse5/README.md499162500000000000 0
 116/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-positions/node_modules/color-convert/index.js499162500000000000 0
-50/home/vino/Documents/forkify-recipe-app/index.html1625287979289319770 0
+50/home/vino/Documents/forkify-recipe-app/index.html1626153402846904853 0
 116/home/vino/Documents/forkify-recipe-app/node_modules/postcss-reduce-transforms/node_modules/postcss/lib/warn-once.js499162500000000000 0
 90/home/vino/Documents/forkify-recipe-app/node_modules/core-js/es/typed-array/copy-within.js499162500000000000 0
 105/home/vino/Documents/forkify-recipe-app/node_modules/jsdom/lib/jsdom/living/nodes/HTMLTimeElement-impl.js499162500000000000 0
@@ -9589,7 +9589,7 @@
 67/home/vino/Documents/forkify-recipe-app/node_modules/coa/lib/cmd.js499162500000000000 0
 71/home/vino/Documents/forkify-recipe-app/node_modules/readdirp/README.md499162500000000000 0
 97/home/vino/Documents/forkify-recipe-app/node_modules/snapdragon-util/node_modules/kind-of/LICENSE1447758397000000000 0
-59/home/vino/Documents/forkify-recipe-app/src/js/view/view.js1626065472228991412 0
+59/home/vino/Documents/forkify-recipe-app/src/js/view/view.js1626153346870405916 0
 86/home/vino/Documents/forkify-recipe-app/node_modules/es-abstract/2017/SameValueZero.js499162500000000000 0
 95/home/vino/Documents/forkify-recipe-app/node_modules/core-js/features/array/virtual/iterator.js499162500000000000 0
 122/home/vino/Documents/forkify-recipe-app/node_modules/postcss-normalize-display-values/node_modules/supports-color/index.js499162500000000000 0
@@ -17134,7 +17134,7 @@
 89/home/vino/Documents/forkify-recipe-app/node_modules/caniuse-lite/data/features/dialog.js499162500000000000 0
 115/home/vino/Documents/forkify-recipe-app/node_modules/cssnano-preset-default/node_modules/color-convert/package.json1625029506886238878 0
 97/home/vino/Documents/forkify-recipe-app/node_modules/caniuse-lite/data/features/viewport-units.js499162500000000000 0
-62/home/vino/Documents/forkify-recipe-app/dist/index.250b04c7.js1626067359491011527 0
+62/home/vino/Documents/forkify-recipe-app/dist/index.250b04c7.js1626153403530911440 0
 90/home/vino/Documents/forkify-recipe-app/node_modules/caniuse-lite/data/features/netinfo.js499162500000000000 0
 75/home/vino/Documents/forkify-recipe-app/node_modules/is-buffer/package.json1625029505974232589 0
 98/home/vino/Documents/forkify-recipe-app/node_modules/caniuse-lite/data/features/resource-timing.js499162500000000000 0
